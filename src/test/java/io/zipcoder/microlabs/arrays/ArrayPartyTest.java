@@ -95,22 +95,34 @@ public class ArrayPartyTest {
     @Test
     public void compressTest() {
         //Given
-        int[] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+        int[] nums = {1, 1, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 4, 4, 4, 4};
         String expected = "1\n3\n2\n1\n4";
         ArrayParty arrayParty = new ArrayParty();
 
         //When
         String actual = arrayParty.compress(nums);
         //Then
-        Assert.assertEquals(expected,actual);
-
+        Assert.assertEquals(expected, actual);
 
 
     }
 
-    //TODO Define the method compressTest
 
-    //TODO Define the method packTest
+    @Test
+    public void packTest() {
+        //Given
+        char[] letters = {'z','a','a','a','a','b','c','c','a','a','d',
+                'e','e','e','e'};
+        String expected = "aaaa, b, cc, aa, d, eeee";
+        ArrayParty arrayParty = new ArrayParty();
+
+        //When
+        String actual = arrayParty.pack(letters);
+        //Then
+        Assert.assertEquals(expected, actual);
+
+
+    }
 
 
 }

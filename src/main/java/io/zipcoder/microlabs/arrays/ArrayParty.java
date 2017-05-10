@@ -54,33 +54,55 @@ public class ArrayParty {
     }
 
     public String compress(int[] nums) {
-        String filledArray = "";
-        String holdString = "";
+        String fillerString = "";
         ArrayList<String> newStrings = new ArrayList<>();
-        String[] testArray;
         for (int intConvertToString : nums) {
             newStrings.add(Integer.toString(intConvertToString));
         }
 
-       // testArray = newStrings.
-
-        for (int i = 0; i < newStrings.size(); i++) {
-            holdString = newStrings.get(i);
-            for (int j = i; j < i + 1; j++) {
-                if (holdString == newStrings.get(j+1.)) {
-
-                }else{
-                    filledArray = holdString;
+        for (int i = 0; i < newStrings.size() - 1; i++) {
+            for (int j = i; j < newStrings.size(); j++) {
+                if (i != newStrings.size()) {
+                    if (newStrings.get(i).equals(newStrings.get(i + 1))) {
+                        newStrings.remove(i + 1);
+                    }
                 }
             }
-              System.out.println(filledArray);
+            if (i == newStrings.size() - 2) {
+                fillerString += newStrings.get(i);
+            } else {
+                fillerString += newStrings.get(i) + "\n";
+            }
+            System.out.println(newStrings.get(i));
+        }
+        return fillerString;
+    }
+
+    public String pack(char[] letters) {
+        String fillerString = "";
+        String result = "";
+        String toFinder = "";
+        ArrayList<String> newStrings = new ArrayList<>();
+        for (char charConvertToString : letters) {
+            newStrings.add(Character.toString(charConvertToString));
         }
 
-        return "";
-    }
-    //TODO Define the method compress
+       result+= newStrings.get(0);
 
-    //TODO Define the method pack
+        for (int i = 1; i < newStrings.size() ; i++) {
+
+            toFinder = newStrings.get(i);
+
+            if (!toFinder.equals(newStrings.get(i - 1))) {
+                result +=", ";
+            }
+            result += toFinder;
+
+        }
+
+
+        return result;
+    }
 
 
 }
