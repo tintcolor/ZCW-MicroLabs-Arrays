@@ -53,7 +53,44 @@ public class ArrayPartyTest {
         Assert.assertEquals("The two string outputs are equal", expected, actual);
     }
 
-    //TODO Define the method reverseTest
+
+    @Test
+    public void reverseTest() {
+        //: Given
+        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+        String expected = "*** Output ***\n" +
+                "Mushrooms\n" +
+                "Tomatoes\n" +
+                "Bacon\n" +
+                "Beans\n" +
+                "Eggs\n" +
+                "Sausage" +
+                "Tails";
+
+        //: When
+        String actual = arrayParty.reverse(breakfast);
+
+        //: Then
+        Assert.assertEquals("The two string outputs are equal", expected, actual);
+    }
+
+    @Test
+    public void isPalindromeTest() {
+        //: Given
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
+        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+
+        //: When
+        boolean palindromeTrue = arrayParty.isPalindrome(palindromic);
+        boolean palindromeFalse = arrayParty.isPalindrome(breakfast);
+
+        //: Then
+        Assert.assertTrue(palindromeTrue);
+        Assert.assertFalse(palindromeFalse);
+    }
+
 
     //TODO Define the method isPalindromeTest
 
