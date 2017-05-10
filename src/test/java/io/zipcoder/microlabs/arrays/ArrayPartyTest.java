@@ -92,7 +92,21 @@ public class ArrayPartyTest {
     }
 
 
-    //TODO Define the method isPalindromeTest
+    @Test
+    public void compressTest() {
+        //Given
+        int[] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+        String expected = "1\n3\n2\n1\n4";
+        ArrayParty arrayParty = new ArrayParty();
+
+        //When
+        String actual = arrayParty.compress(nums);
+        //Then
+        Assert.assertEquals(expected,actual);
+
+
+
+    }
 
     //TODO Define the method compressTest
 

@@ -1,6 +1,8 @@
 package io.zipcoder.microlabs.arrays;
 
 
+import java.util.ArrayList;
+
 public class ArrayParty {
 
     public String printArray(String[] inputArray) {
@@ -43,15 +45,39 @@ public class ArrayParty {
     }
 
     public boolean isPalindrome(String[] testArray) {
-       for(int i=0,j=testArray.length;i<testArray.length && j>0;i++,j--){
-           if(!testArray[i].equals(testArray[j-1])) {
-               return false;
-           }
-       }
+        for (int i = 0, j = testArray.length; i < testArray.length && j > 0; i++, j--) {
+            if (!testArray[i].equals(testArray[j - 1])) {
+                return false;
+            }
+        }
         return true;
     }
-    
 
+    public String compress(int[] nums) {
+        String filledArray = "";
+        String holdString = "";
+        ArrayList<String> newStrings = new ArrayList<>();
+        String[] testArray;
+        for (int intConvertToString : nums) {
+            newStrings.add(Integer.toString(intConvertToString));
+        }
+
+       // testArray = newStrings.
+
+        for (int i = 0; i < newStrings.size(); i++) {
+            holdString = newStrings.get(i);
+            for (int j = i; j < i + 1; j++) {
+                if (holdString == newStrings.get(j+1.)) {
+
+                }else{
+                    filledArray = holdString;
+                }
+            }
+              System.out.println(filledArray);
+        }
+
+        return "";
+    }
     //TODO Define the method compress
 
     //TODO Define the method pack
