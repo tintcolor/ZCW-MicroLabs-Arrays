@@ -79,9 +79,8 @@ public class ArrayParty {
     }
 
     public String pack(char[] letters) {
-        String fillerString = "";
         String result = "";
-        String toFinder = "";
+        String charCombination;
         ArrayList<String> newStrings = new ArrayList<>();
         for (char charConvertToString : letters) {
             newStrings.add(Character.toString(charConvertToString));
@@ -91,15 +90,12 @@ public class ArrayParty {
 
         for (int i = 1; i < newStrings.size() ; i++) {
 
-            toFinder = newStrings.get(i);
-
-            if (!toFinder.equals(newStrings.get(i - 1))) {
+            charCombination = newStrings.get(i);
+            if (!charCombination.equals(newStrings.get(i - 1))) {
                 result +=", ";
             }
-            result += toFinder;
-
+            result += charCombination;
         }
-
 
         return result;
     }
