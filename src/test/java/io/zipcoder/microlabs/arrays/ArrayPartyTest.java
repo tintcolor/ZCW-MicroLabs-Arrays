@@ -111,7 +111,7 @@ public class ArrayPartyTest {
     @Test
     public void packTest() {
         //Given
-        char[] letters = {'z','a','a','a','a','b','c','c','a','a','d',
+        char[] letters = {'a','a','a','a','b','c','c','a','a','d',
                 'e','e','e','e'};
         String expected = "aaaa, b, cc, aa, d, eeee";
         ArrayParty arrayParty = new ArrayParty();
