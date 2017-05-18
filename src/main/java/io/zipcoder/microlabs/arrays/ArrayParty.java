@@ -11,7 +11,6 @@ public class ArrayParty {
         String filledString = "";
         for (String breakfast : inputArray) {
             filledString += "\n" + breakfast;
-            // System.out.println(breakfast);
         }
         return header + filledString;
     }

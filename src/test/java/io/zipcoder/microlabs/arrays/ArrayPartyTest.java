@@ -98,7 +98,6 @@ public class ArrayPartyTest {
         int[] nums = {1, 1, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 4, 4, 4, 4};
         String expected = "1\n3\n2\n1\n4";
         ArrayParty arrayParty = new ArrayParty();
-
         //When
         String actual = arrayParty.compress(nums);
         //Then
@@ -111,8 +110,8 @@ public class ArrayPartyTest {
     @Test
     public void packTest() {
         //Given
-        char[] letters = {'a','a','a','a','b','c','c','a','a','d',
-                'e','e','e','e'};
+        char[] letters = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd',
+                'e', 'e', 'e', 'e'};
         String expected = "aaaa, b, cc, aa, d, eeee";
         ArrayParty arrayParty = new ArrayParty();
 
@@ -120,8 +119,6 @@ public class ArrayPartyTest {
         String actual = arrayParty.pack(letters);
         //Then
         Assert.assertEquals(expected, actual);
-
-
     }
 
 
